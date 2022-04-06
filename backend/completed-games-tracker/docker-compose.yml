@@ -1,0 +1,32 @@
+version: "3.9"
+
+services:
+  backend:
+    container_name: completed-games-tracker-back-end
+    build:
+      context: .
+      target: BUILD_IMAGE
+    volumes:
+      - .:/web
+    command: /web/gradlew bootRun
+    ports:
+      - "8000:8000"
+    depends_on:
+      - database
+
+  tests:
+    container_name: completed-games-tracker-tests
+    build:
+      context: .
+      target: BUILD_IMAGE
+    volumes:
+      - .:/test
+    command: /test/gradlew cleanTest test
+    depends_on:
+      - database
+
+  database:
+    image: mongo:latest
+    container_name: completed-games-tracker-db
+    ports:
+      - "27017:27017"
