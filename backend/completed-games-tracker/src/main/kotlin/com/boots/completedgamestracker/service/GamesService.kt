@@ -2,7 +2,6 @@ package com.boots.completedgamestracker.service
 
 import com.boots.completedgamestracker.model.Game
 import com.boots.completedgamestracker.repository.GamesRepository
-import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.stereotype.Service
 import org.springframework.web.multipart.MultipartFile
 

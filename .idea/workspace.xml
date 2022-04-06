@@ -5,12 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32eb4845-a343-4fb4-854b-840ab377556c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/controller/GamesController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/controller/GamesController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/CompletedGamesTrackerApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/CompletedGamesTrackerApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/config/MongoConfig.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/model/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/model/Game.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/repository/GamesRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/repository/GamesRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/service/GamesService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/kotlin/com/boots/completedgamestracker/service/GamesService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/completed-games-tracker/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/completed-games-tracker/src/test/kotlin/com/boots/completedgamestracker/CompletedGamesTrackerApplicationTests.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,12 +28,26 @@
   <component name="ExternalProjectsManager">
     <system id="GRADLE">
       <state>
+        <task path="$PROJECT_DIR$/backend/completed-games-tracker">
+          <activation />
+        </task>
         <projects_view>
           <tree_state>
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="completed-games-tracker" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="completed-games-tracker" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="completed-games-tracker" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -78,7 +95,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$USER_HOME$/relex/planning-cloud" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
@@ -97,6 +114,92 @@
     </option>
   </component>
   <component name="RunManager" selected="Spring Boot.CompletedGamesTrackerApplication">
+    <configuration name="CompletedGamesTrackerApplicationTests.contextLoads" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend/completed-games-tracker" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.boots.completedgamestracker.CompletedGamesTrackerApplicationTests.contextLoads&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="completed-games-tracker [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend/completed-games-tracker" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="completed-games-tracker [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend/completed-games-tracker" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="completed-games-tracker [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$/backend/completed-games-tracker" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="CompletedGamesTrackerApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="backend.completed-games-tracker.main~1" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.boots.completedgamestracker.CompletedGamesTrackerApplication" />
@@ -111,6 +214,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="completed-games-tracker/Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
+      <deployment type="dockerfile">
+        <settings>
+          <option name="buildOnly" value="true" />
+          <option name="containerName" value="" />
+          <option name="sourceFilePath" value="backend/completed-games-tracker/Dockerfile" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.CompletedGamesTrackerApplicationTests.contextLoads" />
+        <item itemvalue="Gradle.completed-games-tracker [build]" />
+        <item itemvalue="Gradle.completed-games-tracker [clean]" />
+        <item itemvalue="Docker.completed-games-tracker/Dockerfile" />
+        <item itemvalue="Gradle.completed-games-tracker [jar]" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -121,7 +243,7 @@
       <option name="presentableId" value="Default" />
       <updated>1649171635468</updated>
       <workItem from="1649171636626" duration="4636000" />
-      <workItem from="1649235625396" duration="3846000" />
+      <workItem from="1649235625396" duration="12355000" />
     </task>
     <servers />
   </component>

@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.boots"
-version = "0.0.1-SNAPSHOT"
+//version = "0.0.1-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
@@ -18,16 +18,17 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-web:2.6.5")
+	implementation("org.springframework.boot:spring-boot-starter-data-mongodb:2.6.6")
+
 	implementation("org.springframework.data:spring-data-commons:2.6.3")
 	implementation("org.springframework.data:spring-data-mongodb:3.3.3")
 
-	implementation("org.mongodb:mongodb-driver:3.12.10")
+	//implementation("org.mongodb:mongodb-driver:3.12.10")
 
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.2")
 
 	implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.5")
 }
