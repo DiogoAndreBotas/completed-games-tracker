@@ -1,6 +1,7 @@
 package com.boots.completedgamestracker.controller
 
 import com.boots.completedgamestracker.model.Game
+import com.boots.completedgamestracker.model.UploadGamesResponse
 import com.boots.completedgamestracker.service.GamesService
 import org.bson.types.ObjectId
 import org.springframework.web.bind.annotation.GetMapping
@@ -23,7 +24,7 @@ class GamesController (
     fun postGame(@RequestBody game: Game) = gamesService.createGame(game)
 
     @PostMapping("/upload")
-    fun uploadTextFile(@RequestPart file: MultipartFile) = gamesService.processTextFile(file)
+    fun uploadTextFile(@RequestPart file: MultipartFile) = UploadGamesResponse(gamesService.processTextFile(file))
 
     @GetMapping
     fun getAllGames() = gamesService.getAllGames()
