@@ -23,14 +23,14 @@ dependencies {
 	implementation("org.springframework.data:spring-data-commons:2.6.3")
 	implementation("org.springframework.data:spring-data-mongodb:3.3.3")
 
-	//implementation("org.mongodb:mongodb-driver:3.12.10")
-
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.2")
 
 	implementation("org.jetbrains.kotlin:kotlin-reflect:1.6.10")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.6.10")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test:2.6.5")
+
+	testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
 }
 
 tasks.withType<KotlinCompile> {
