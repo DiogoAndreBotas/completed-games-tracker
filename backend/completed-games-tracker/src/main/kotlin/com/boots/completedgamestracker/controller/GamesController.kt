@@ -1,6 +1,7 @@
 package com.boots.completedgamestracker.controller
 
 import com.boots.completedgamestracker.model.Game
+import com.boots.completedgamestracker.model.ListGamesResponse
 import com.boots.completedgamestracker.model.UploadGamesResponse
 import com.boots.completedgamestracker.service.GamesService
 import org.bson.types.ObjectId
@@ -24,10 +25,16 @@ class GamesController (
     fun postGame(@RequestBody game: Game) = gamesService.createGame(game)
 
     @PostMapping("/upload")
-    fun uploadTextFile(@RequestPart file: MultipartFile) = UploadGamesResponse(gamesService.processTextFile(file))
+    fun uploadTextFile(@RequestPart file: MultipartFile): UploadGamesResponse {
+        val createdGames = gamesService.processTextFile(file)
+        return UploadGamesResponse(createdGames.size, createdGames)
+    }
 
     @GetMapping
-    fun getAllGames() = gamesService.getAllGames()
+    fun getAllGames(): ListGamesResponse {
+        val games = gamesService.getAllGames()
+        return ListGamesResponse(games.size, games)
+    }
 
     @GetMapping("/{id}")
     fun getGame(@PathVariable("id") id: ObjectId) = gamesService.getGame(id)

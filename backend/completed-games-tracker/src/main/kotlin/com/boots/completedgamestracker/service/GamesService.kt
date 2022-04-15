@@ -13,13 +13,12 @@ class GamesService(
 
     fun createGame(game: Game): Game = gamesRepository.insert(game)
 
-    fun processTextFile(file: MultipartFile): Int =
+    fun processTextFile(file: MultipartFile): List<Game> =
         file
             .inputStream
             .bufferedReader()
             .readLines()
             .map { gamesRepository.insert(Game(name = it)) }
-            .count()
 
     fun getAllGames(): List<Game> = gamesRepository.findAll()
 

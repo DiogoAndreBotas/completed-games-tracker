@@ -30,12 +30,17 @@ class GamesControllerTests {
     @Test
     fun postGamesUploadWithTextFileWithContentReturnsCountOfGames() {
         whenever(gamesService.processTextFile(any()))
-            .thenReturn(10)
+            .thenReturn(listOf(
+                Game(name = "Yakuza 0"),
+                Game(name = "Yakuza Kiwami"),
+                Game(name = "Yakuza Kiwami 2"),
+                Game(name = "Yakuza 3")
+            ))
 
         val multipartFile: MultipartFile = mock()
         val uploadGamesResponse = gamesController.uploadTextFile(multipartFile)
 
-        assertThat(uploadGamesResponse.numberOfCreatedGames).isEqualTo(10)
+        assertThat(uploadGamesResponse.numberOfCreatedGames).isEqualTo(4)
     }
 
     @Test
@@ -45,7 +50,7 @@ class GamesControllerTests {
 
         val games = gamesController.getAllGames()
 
-        assertThat(games.size).isZero
+        assertThat(games.numberOfGames).isZero
     }
 
     @Test
@@ -60,7 +65,7 @@ class GamesControllerTests {
 
         val games = gamesController.getAllGames()
 
-        assertThat(games.size).isEqualTo(4)
+        assertThat(games.numberOfGames).isEqualTo(4)
     }
 
     @Test

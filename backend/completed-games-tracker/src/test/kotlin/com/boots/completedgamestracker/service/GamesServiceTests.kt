@@ -43,7 +43,7 @@ class GamesServiceTests {
         )
 
         val createdGamesCount = gamesService.processTextFile(multipartFile)
-        assertThat(createdGamesCount).isZero
+        assertThat(createdGamesCount.size).isZero
     }
 
     @Test
@@ -57,8 +57,11 @@ class GamesServiceTests {
             inputStream.readAllBytes()
         )
 
+        whenever(gamesRepository.insert(Mockito.any(Game::class.java)))
+            .thenReturn(Game(name = "Assassin's Creed title"))
+
         val createdGamesCount = gamesService.processTextFile(multipartFile)
-        assertThat(createdGamesCount).isEqualTo(10)
+        assertThat(createdGamesCount.size).isEqualTo(10)
     }
 
     @Test
