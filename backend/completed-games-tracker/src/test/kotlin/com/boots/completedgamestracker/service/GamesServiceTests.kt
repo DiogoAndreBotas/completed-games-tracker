@@ -2,7 +2,6 @@ package com.boots.completedgamestracker.service
 
 import com.boots.completedgamestracker.model.Game
 import com.boots.completedgamestracker.repository.GamesRepository
-import org.assertj.core.api.Assertions
 import org.assertj.core.api.Assertions.assertThat
 import org.bson.types.ObjectId
 import org.junit.jupiter.api.Test
@@ -11,7 +10,6 @@ import org.mockito.kotlin.any
 import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 import org.springframework.mock.web.MockMultipartFile
-import org.springframework.web.multipart.MultipartFile
 import java.io.File
 import java.io.FileInputStream
 import java.util.*
@@ -89,11 +87,11 @@ class GamesServiceTests {
     }
 
     @Test
-    fun getGameByIdReturnsGame() {
+    fun getGameReturnsGame() {
         whenever(gamesRepository.findById(any()))
             .thenReturn(Optional.of(Game(name = "The Darkside Detective")))
 
-        val game = gamesService.getGameById(ObjectId.get())
+        val game = gamesService.getGame(ObjectId.get())
 
         assertThat(game.name).isEqualTo("The Darkside Detective")
     }

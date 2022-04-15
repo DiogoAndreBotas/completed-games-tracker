@@ -7,7 +7,6 @@ import org.mockito.kotlin.mock
 import org.mockito.kotlin.whenever
 import org.assertj.core.api.Assertions.assertThat
 import org.bson.types.ObjectId
-import org.junit.jupiter.api.BeforeEach
 import org.mockito.kotlin.any
 import org.springframework.web.multipart.MultipartFile
 
@@ -65,12 +64,13 @@ class GamesControllerTests {
     }
 
     @Test
-    fun getGameByIdReturnsGame() {
-        whenever(gamesService.getGameById(any()))
+    fun getGameReturnsGame() {
+        whenever(gamesService.getGame(any()))
             .thenReturn(Game(name = "The Darkside Detective"))
 
-        val game = gamesController.getGameById(ObjectId.get())
+        val game = gamesController.getGame(ObjectId.get())
 
         assertThat(game.name).isEqualTo("The Darkside Detective")
     }
+
 }

@@ -23,6 +23,13 @@ class GamesService(
 
     fun getAllGames(): List<Game> = gamesRepository.findAll()
 
-    fun getGameById(id: ObjectId): Game = gamesRepository.findById(id).get()
+    fun getGame(id: ObjectId): Game = gamesRepository.findById(id).get()
+
+    fun deleteGame(id: ObjectId): ObjectId {
+        gamesRepository.delete(
+            gamesRepository.findById(id).get()
+        )
+        return id
+    }
 
 }
